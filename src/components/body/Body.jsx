@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Header from '../header/Header'
 import './Body.styles.scss';
 
-function Body() {
+function Body({ spotify }) {
     return (
         <div className="body">
-            I am the body
+            <Header spotify={spotify}/>
         </div>
     )
 }
