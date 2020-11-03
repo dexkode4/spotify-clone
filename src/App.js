@@ -3,7 +3,8 @@ import { getTokenFromResponse } from './spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
 import Login from './components/login/Login';
 import Player from './components/player/Player';
-import { useDataLayerValue } from './context/dataLayer'
+import { useDataLayerValue } from './context/dataLayer';
+import {actionTypes} from './context/types';
 
 const spotify = new SpotifyWebApi();
 
@@ -19,15 +20,22 @@ function App() {
 
     if (_token) {
       dispatch({
-        type: 'SET_TOKEN',
+        type: actionTypes.SET_TOKEN,
         token: _token
       })
       spotify.setAccessToken(_token);
 
       spotify.getMe().then(user => {
         dispatch({
-          type: 'SET_USER',
+          type: actionTypes.SET_USER,
           user: user
+        })
+      })
+
+      spotify.getUserPlaylists().then(playlists => {
+        dispatch({
+          type: actionTypes.SET_PLAYLIST,
+          playlists: playlists
         })
       })
     }
