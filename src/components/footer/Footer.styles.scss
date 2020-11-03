@@ -15,6 +15,10 @@
       flex: 0.3;
     }
 
+    &__icon,&__green {
+      cursor: pointer;
+    } 
+
     &__green {
       color: #1ed15e;
     }

@@ -14,7 +14,7 @@ function Footer() {
 	return (
 		<div className="footer">
 			<div className="footer__left">
-                <img src="" alt=""/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Xxxtentacion_mugshot.jpg" alt="" className="footer__albumLogo"/>
                 <div className="footer__songInfo">
                     <h4>Heart eater</h4>
                     <p>XXXTentacion</p>
