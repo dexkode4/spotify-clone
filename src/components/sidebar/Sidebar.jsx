@@ -24,10 +24,7 @@ function Sidebar() {
       </strong>
 
       <hr/>
-      {/* <SidebarOption title="Hip hop" />
-      <SidebarOption title="Rock" />
-      <SidebarOption title="R n B" /> */}
-
+       
       {
           playlists?.items?.map(playlist => (
               <SidebarOption title={playlist.name}/>

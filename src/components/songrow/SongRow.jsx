@@ -1,6 +1,6 @@
 import React from 'react';
 import './SongRow.styles.scss';
-
+ 
 function SongRow({ track, playSong }) {
     console.log(track);
     return (
